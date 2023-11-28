@@ -1,0 +1,229 @@
+/* =========== google fonts ============*/
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap");
+
+/**============= variables =============*/
+
+:root {
+  /**============= colors ==========*/
+  /* ============ Background ==========*/
+  --main-background: #333333;
+  --card-background: #323030;
+
+  /* ============ text ==========*/
+  --title-color: hsl(0, 0%, 15%);
+  --sub-title-color: hsl(0, 0%, 25%);
+  --grey-text: hsl(215, 10%, 25%);
+  --text-color: hsl(0, 4%, 84%);
+  --text-white: hsl(0, 25%, 97%);
+
+  /* ============ neutral ==========*/
+  --grey: hsl(215, 10%, 62%);
+  --grey-hover: hsl(215, 10%, 50%);
+  --grey-ultra-light: hsl(215, 10%, 85%);
+  --btn-blue:hsl(215, 100%, 50%);
+  --btn-blue-hover:hsl(215, 100%, 35%);
+
+  /**============ fonts ============*/
+
+  /* ========== type font ==========*/
+  --heebo: "heebo";
+
+  /* ========= font weight =========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /* ========= typography ==========*/
+  --fs-2: 2rem;
+  --fs-1-5: 1.5rem;
+  --fs-1-15: 1.15rem;
+  --fs-1: 1rem;
+  --fs-0-8: 0.8rem;
+
+  /** ========= cards style =========*/
+  --border-radius-cards: 0.75rem;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --box-shadow: 0px 4px 32px var(--shadow-color);
+
+  /**========== Margenes ==========*/
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-25: 1.25rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  /**========== extra ==========*/
+  --transition: color 0.4s, background-color 0.4s ease-in-out;
+  --border-radius-btn: 4px;
+}
+
+/** ======+ media variables ====+==*/
+
+/**============ base ============*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-color);
+  background: var(--main-background);
+  font-size: 14px;
+  font-family: var(--heebo);
+}
+.content-input input,
+.content-select select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+/**====== REUSABLE CSS CLASSES ======*/
+
+.title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--mb-2-5);
+}
+
+.text-header-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--mb-2-5);
+    font-size: var(--fs-1-15);
+}
+
+.new-task-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--mb-2-5);
+    height: 50px;
+}
+
+.button-new-task{
+    background-color: #98FB98;
+    width: 40%;
+    height: 100%;
+    transition: width 0.3s ease, height 0.3s ease;
+    border: none;
+}
+
+.button-new-task:hover{
+    cursor: pointer;
+    height: 103%;
+    width: 41.5%;
+}
+
+
+.task-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--mb-2-5);
+    font-size: var(--fs-1-15);
+    height: 200px;
+}
+
+.card{
+    width: 40%;
+    height: 100%;
+    background-color: rgb(33, 33, 33);
+    padding: var(--mb-1);
+    border-radius: 20px;
+    transition: width 0.5s ease, height 0.5s ease; /* Agrega esta línea para la transición suave */
+}
+
+.card:hover{
+    cursor: pointer;
+    width: 42%;
+    height: 103%;
+}
+
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.popup-content {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/** ======+ dentro del popUp ====+==*/
+
+.inside-popup-container{
+    width: 100%;
+    height: 100%;
+    padding-top: 15px;
+}
+
+.text-inside-popup{
+    font-size: var(--mb-1-25);
+    margin: 0px 0px 20px 15px;
+}
+
+.text-inside-popup label {
+    font-size: var(--mb-1-25);
+    margin: 0px 0px 20px 15px;
+}
+
+.text-inside-popup input {
+    font-size: var(--mb-1-25);
+    margin: 0px 0px 20px 15px;
+    padding: 5px;
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid silver;
+    background-color: var(--card-background);
+    outline: none;
+    color: #FFFFFF;
+}
+
+.text-inside-popup input::placeholder {
+    font-size: var(--mb-1-25);
+    margin: 0px 0px 20px 15px;
+    color: #999;
+}
+
+.description-task{
+    width: 90%;
+    height: 50%;
+    margin-left: 20px;
+    border-color: black;
+    background-color: #262626;
+    border-radius: 10px;
+}
