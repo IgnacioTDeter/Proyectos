@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+    <script>
+        function pressedButton(value) {
+            console.log("Button pressed: " + value);
+            // You can add your logic here to handle the button press
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora</h1>
+        <h2>By Ignacio Deter</h2>
+    </header>
+    <main>
+        <section class="container-calculadora">
+            <div>
+                <input class="result-calculadora text-result" id="resultado"></input>
+            </div>
+
+            <div class="container-grid">
+                <button class="grid-item special-operator textButton grid-column-two" value="AC" onclick="borrarTodo()"> AC </button>
+                <button class="grid-item operator textButton" value="%" onclick="pressedButton('%')"> % </button>
+
+                <button class="grid-item operator textButton" value="/" onclick="pressedButton('/')"> / </button>
+                <button class="grid-item textButton" value="7" onclick="pressedButton('7')"> 7 </button>
+                <button class="grid-item textButton" value="8" onclick="pressedButton('8')"> 8 </button>
+                <button class="grid-item textButton" value="9" onclick="pressedButton('9')"> 9 </button>
+                <button class="grid-item operator textButton" value="x" onclick="pressedButton('*')"> x </button>
+
+                <button class="grid-item textButton" value="4" onclick="pressedButton('4')"> 4 </button>
+                <button class="grid-item textButton" value="5" onclick="pressedButton('5')"> 5 </button>
+                <button class="grid-item textButton" value="6" onclick="pressedButton('6')"> 6 </button>
+                <button class="grid-item operator textButton" value="-" onclick="pressedButton('-')"> - </button>
+
+                <button class="grid-item textButton" value="1" onclick="pressedButton('1')"> 1 </button>
+                <button class="grid-item textButton" value="2" onclick="pressedButton('2')"> 2 </button>
+                <button class="grid-item textButton" value="3" onclick="pressedButton('3')"> 3 </button>
+                <button class="grid-item operator textButton" value="+" onclick="pressedButton('+')"> + </button>
+
+                <button class="grid-item textButton" value="0" onclick="pressedButton('0')"> 0 </button>
+                <button class="grid-item operator textButton" value="." onclick="pressedButton('.')"> . </button>
+                <button class="grid-item operator textButton grid-column-two" value="=" onclick="calcular()"> = </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

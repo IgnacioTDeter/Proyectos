@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*<#-------- Global Variables --------#>*/
+:root{
+
+    /*<#-------- Colores  --------#>*/
+    --background-color: #333333; 
+    --operator-button: #e7863c;
+    --operator-button-hover: #cf6e25;
+    --normal-button: #f2f1f1;
+    --normal-button-hover: rgb(161, 161, 161);;
+    --delete-button: #255ecf;
+    --delete-button-hover: #2150af;
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: var(--background-color);
+}
+
+
+h1 {
+    color: #aeaeae;
+    text-align: center;
+    margin-top: 30px;
+}
+
+h2 {
+    color: #616161;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container-calculadora {
+    margin: 0 auto;
+    width: 40%;
+    height: 700px;
+    background-color: aliceblue;
+    border-radius: 30px;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.result-calculadora {
+    margin: 0 auto;
+    border-radius: 5px;
+    border: none;
+    width: 90%;
+    height: 80px;
+    background-color: #6161618d;
+    padding-top: 3%;
+    margin-left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-result{
+    text-align: right;
+    font-size: 40px;
+}
+
+.container-grid {
+    display: grid;
+    width: 90%;
+    height: 70%;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+    
+}
+
+.grid-item {
+    background-color: #f2f1f1;
+    padding: 20px;
+    text-align: center;
+    border: none;
+    box-shadow: 0px 2px 0px var(--normal-button-hover);
+}
+
+.operator {
+    background-color: var(--operator-button); 
+}
+
+
+.grid-column-two {
+    grid-column: span 2;
+}
+
+.grid-item.operator:hover{
+    background-color: var(--operator-button-hover);
+    cursor: pointer;
+}
+
+.special-operator{
+    background-color: var(--delete-button);
+    color: #f2f1f1;
+}
+
+.grid-item.special-operator:hover{
+    background-color: var(--delete-button-hover);
+    cursor: pointer;
+}
+
+
+.grid-item:hover{
+    background-color: var(--normal-button-hover);
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.textButton{
+    font-weight: 500;
+    font-size: large;
+}
+
+
+@media (max-width: 768px) {
+    .container-calculadora{
+        width: 80%;
+    }
+}
