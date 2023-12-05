@@ -57,6 +57,15 @@ body{
     margin: 4px 0.2px 4px 2px;
 }
 
+.grid-item:hover{
+    cursor: default;
+}
+
+input:focus {
+    outline: none;
+    
+}
+
 .grid-keyboard{
     display: grid;
     grid-template-columns: repeat(10, 1fr); /* 5 columnas */
