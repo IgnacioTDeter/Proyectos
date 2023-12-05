@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> Wordle </title>
+</head>
+<body>
+    
+    <main>
+        <section class="header-wordle"> 
+            LA PALABRA DEL DIA
+        </section>
+        <section class="container-principal-wordle">
+            <div class="grid-container">
+                <input type="text" class="grid-item" id="input1" readonly>
+                <input type="text" class="grid-item" id="input2" readonly>
+                <input type="text" class="grid-item" id="input3" readonly>
+                <input type="text" class="grid-item" id="input4" readonly>
+                <input type="text" class="grid-item" id="input5" readonly>
+        
+                <input type="text" class="grid-item" id="input6" readonly>
+                <input type="text" class="grid-item" id="input7" readonly>
+                <input type="text" class="grid-item" id="input8" readonly>
+                <input type="text" class="grid-item" id="input9" readonly>
+                <input type="text" class="grid-item" id="input10" readonly>
+        
+                <input type="text" class="grid-item" id="input11" readonly>
+                <input type="text" class="grid-item" id="input12" readonly>
+                <input type="text" class="grid-item" id="input13" readonly>
+                <input type="text" class="grid-item" id="input14" readonly>
+                <input type="text" class="grid-item" id="input15" readonly>
+        
+                <input type="text" class="grid-item" id="input16" readonly>
+                <input type="text" class="grid-item" id="input17" readonly>
+                <input type="text" class="grid-item" id="input18" readonly>
+                <input type="text" class="grid-item" id="input19" readonly>
+                <input type="text" class="grid-item" id="input20" readonly>
+        
+                <input type="text" class="grid-item" id="input21" readonly>
+                <input type="text" class="grid-item" id="input22" readonly>
+                <input type="text" class="grid-item" id="input23" readonly>
+                <input type="text" class="grid-item" id="input24" readonly>
+                <input type="text" class="grid-item" id="input25" readonly>
+            </div>
+        </section>
+        
+
+        <section class="grid-keyboard">
+            <!-- Divs con la clase "grid-item-keyboard" representando teclas del teclado -->
+            <div class="grid-item-keyboard" onclick="keyClicked('Q')">Q</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('W')">W</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('E')">E</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('R')">R</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('T')">T</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('Y')">Y</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('U')">U</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('I')">I</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('O')">O</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('P')">P</div>
+            
+            <div class="grid-item-keyboard" onclick="keyClicked('A')">A</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('S')">S</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('D')">D</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('F')">F</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('G')">G</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('H')">H</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('J')">J</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('K')">K</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('L')">L</div>
+            
+            <div class="grid-item-keyboard" onclick="keyClicked('Z')">Z</div>
+            <div class="grid-item-keyboard grid-span-column" onclick="enterKey()">Enter</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('X')">X</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('C')">C</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('V')">V</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('B')">B</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('N')">N</div>
+            <div class="grid-item-keyboard" onclick="keyClicked('M')">M</div>
+            <div class="grid-item-keyboard grid-span-column" onclick="deleteLetter()">Borrar</div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
