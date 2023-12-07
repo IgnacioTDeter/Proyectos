@@ -5,7 +5,6 @@ let posicionArray = 0;
 let maxLetters = 5;
 let comparacionPalabras = [];
 let counter = 0;
-let contadorEliminar = 5;
 let bloques = [true, true, true, true, true];
 
 function keyClicked(valor) {
@@ -57,17 +56,25 @@ function showLettersSolution(comparacionPalabras) {
             currentInput.value = letra;
             currentInput.style.backgroundColor = color;
         }
+
+        if(color == "#585f63"){
+            document.getElementById('key-' + letra).style.backgroundColor = "#585f63";
+        }
     }
 
     bloques[comparacionPalabras.length / 5 - 1] = false;
+
+   
 }
+
+
 
 function enterKey() {
     // Verifica si la posición actual en el array es múltiplo de 5
-    if (posicionArray % 5 === 0) {
-        // Inicia un bucle que recorre desde 'counter' hasta el final del array 'palabraUsuario'
+    if (posicionArray % 5 === 0 && palabraUsuario.length <= 25) {
+
         for (let i = counter, k = 0; i < palabraUsuario.length; i++, k++) {
-            // Obtiene la letra actual del array 'palabraUsuario' en la posición 'i'
+    
             let letra = palabraUsuario[i];
 
             // Determina el color según si la letra coincide con la letra en la misma posición de 'palabraJuego'
@@ -75,24 +82,18 @@ function enterKey() {
             // y gris oscuro (#585f63) si no es ninguna de las anteriores.
             let color = letra === palabraJuego[k] ? "#368039" : (palabraJuego.includes(letra) ? "#e4a81d" : "#585f63");
 
-            // Agrega un objeto al array 'comparacionPalabras' que contiene la letra actual y su color
             comparacionPalabras.push({ letra, color });
         }
 
         // Incrementa 'counter' en 5 para el próximo bloque de comparación
         counter += 5;
-
-        // Muestra en la consola el array 'comparacionPalabras' después de la comparación
         console.log(comparacionPalabras);
-
-        // Llama a la función 'showLettersSolution' con el array 'comparacionPalabras' como argumento
         showLettersSolution(comparacionPalabras);
-
         // Aumenta el número máximo de letras permitidas en 'palabraUsuario' en 5
         maxLetters += 5;
 
-        // Incrementa el contador de letras eliminadas en 5
-        contadorEliminar += 5;
+   
+       
     }
 
 }
